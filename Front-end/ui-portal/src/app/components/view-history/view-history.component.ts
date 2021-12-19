@@ -19,6 +19,7 @@ export class ViewHistoryComponent implements OnInit {
   }
 
   showView(index:number): any{
+    this.displayStyle = "block";
     this.emailTemplate = this.historyList[index]['content']
   }
   openPopup(i: any) {

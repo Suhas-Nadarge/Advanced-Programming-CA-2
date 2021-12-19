@@ -2,6 +2,7 @@
 <!-- https://www.npmjs.com/package/@kolkov/angular-editor -->
 
 <div class="container-fluid">
+  
 <div [formGroup]="emailForm">
   <div class="row">
     <div class="col-sm-6">
@@ -18,11 +19,15 @@
             <button type="button"(click)="sendEmail()" class="btn btn-dark btn-lg">Send</button>
           
     </div>
+    <div *ngIf="showSpinner" class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
     <div class="col-sm-6">
         <!-- <div class="row"></div> -->
         <label for="exampleInputEmail1" class="form-label">Write Email</label>
         <angular-editor formControlName="email_body" readonly [config]="editorConfig"></angular-editor>
         
+
         <!-- <div [innerHTML]="emailForm.get('email_body')?.value">
             <h2></h2>
            
