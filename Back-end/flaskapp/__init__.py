@@ -25,8 +25,8 @@ db = SQLAlchemy(app)
 # refrence: https://pythonhosted.org/Flask-Mail/
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_ID')
-app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASS')
+# app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_ID')
+# app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASS')
 app.config['MAIL_USERNAME'] = 'acereddy8053@gmail.com'
 app.config['MAIL_PASSWORD'] = 'suhas3679'
 app.config['MAIL_USE_TLS'] = False
