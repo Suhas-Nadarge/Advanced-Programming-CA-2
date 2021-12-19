@@ -44,13 +44,13 @@
                
             </tr>
         </tbody>
-
+<tr><b><pre>No Data Found</pre> </b></tr>
       
   <!--Referred and modified by Suhas from   https://www.geeksforgeeks.org/how-to-make-a-bootstrap-modal-popup-in-angular-9-8/-->
   <!-- Modal -->
  
     </table>
-    <p><b>Do you want to clear history </b><button style="text-align-last: right;" class="btn btn-dark btn-sm" (click)="deleteRecord(0,true)">Delete ALL</button></p>
+    <p *ngIf="historyList?.length"><b>Do you want to clear history </b><button style="text-align-last: right;" class="btn btn-dark btn-sm" (click)="deleteRecord(0,true)">Delete ALL</button></p>
 
     <div
     class="modal"
