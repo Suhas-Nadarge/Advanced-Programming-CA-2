@@ -8,7 +8,7 @@ import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   {path: '' , redirectTo: 'home', pathMatch: 'full'},
- {path: 'home', component: HomeComponent,canActivate:[AuthenticationGuard]  },
+ {path: 'home', component: HomeComponent},
  {path: 'login', component: LoginComponent },
  {path: 'send-email', component: SendEmailComponent ,canActivate:[AuthenticationGuard]},
  {path: 'view-history', component: ViewHistoryComponent,canActivate:[AuthenticationGuard] }
