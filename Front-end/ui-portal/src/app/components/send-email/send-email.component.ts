@@ -15,6 +15,7 @@ export class SendEmailComponent implements OnInit {
   editorConfig = EditorConfig
   emailForm!: FormGroup;
   emailTemplate = ''
+  showSpinner = false;
   constructor(private fb:FormBuilder,public router:Router, public emailService: SendEmailService, public toastr:ToastrManager) { }
   ihtml='<h3>Bold</h3>'
   ngOnInit(): void {
@@ -33,13 +34,20 @@ export class SendEmailComponent implements OnInit {
   }
 
   sendEmail(){
+    this.showSpinner = true;
     this.emailService.SendEmail(this.emailForm?.value).subscribe((data:any) => {
       console.log(JSON.stringify(data));
+      this.showSpinner = false;
       this.toastr.successToastr('Email sent successfully!', 'Success',{toastTimeout:6000});
       // this.toastr.errorToastr('This movie is already exist in your database', 'Oops!',{toastTimeout:6000});
       this.emailForm?.reset();
     },(err: any)=>{
+      this.showSpinner = false;
       this.toastr.errorToastr(err['error'] && err['error']['message']? err['error']['message'] : 'Something went wrong', 'Oops!',{toastTimeout:6000});
     });
   }
 }
+
+
+// az login
+//  az webapp deployment user set --user-name suhas3679 --password [suhas3679]
