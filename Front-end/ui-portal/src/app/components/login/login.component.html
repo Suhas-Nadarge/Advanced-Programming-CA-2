@@ -24,7 +24,7 @@
                     <div *ngIf="isLogin" class="tab-pane fade show active" aria-labelledby="pills-home-tab">
                         <div class="form px-4 pt-5">
                              <input type="text" formControlName="username" class="form-control" placeholder="Email or Phone">
-                             <input type="text" formControlName="password" class="form-control" placeholder="Password">
+                             <input type="password" formControlName="password" class="form-control" placeholder="Password">
                               <button class="btn btn-dark btn-block" (click)="login(loginForm.get('username')?.value,loginForm.get('password')?.value)">Login</button> 
                         </div>
                     </div>

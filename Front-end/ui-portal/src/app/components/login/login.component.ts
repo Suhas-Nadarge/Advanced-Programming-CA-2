@@ -60,7 +60,7 @@ registerUser(): any{
 
     this.loginService.registerUser(requestObj).subscribe((data:any) => {
       if(data['status'] === 'success'){
-      this.toastr.successToastr('User Registered successfully, check your mail for the confirmation!', 'Success',{toastTimeout:6000});
+      this.toastr.successToastr('User Registered successfully, you can login now!', 'Success',{toastTimeout:6000});
       this.loginForm.reset();
       this.router.navigate(['/login'])
       
