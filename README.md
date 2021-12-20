@@ -35,8 +35,10 @@ User Guide:
 -For better understanding how to use the application, we have also embedded Youtube link of our demo on 'Home Page'
 
 
+Deployed URL:
+https://bulkmail.herokuapp.com/login
 
--We are facing difficulties while deploying application, so for time being we have up and running codebase on below virtual machine for Demo:
+-We are facing CORS issues while calling services in application, so for time being we have up and running codebase on below virtual machine for Demo:
  -IP address:20.126.157.160
  -Username:Virender
  -Password:DBS@virtualpc
